@@ -5,19 +5,18 @@
   "main": "app.js",
   "scripts": {
     "setup": "rm -rf public/vendor node_modules && npm i && bower i",
-    "start": "node app.js"
+    "start": "node app.js",
+    "postinstall": "bower i"
+  },
+  "engines":{
+    "node": "5.0.0"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/CodingHouseFI/social-login.git"
+    "type": "git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/CodingHouseFI/social-login/issues"
-  },
-  "homepage": "https://github.com/CodingHouseFI/social-login#readme",
   "dependencies": {
     "body-parser": "^1.14.1",
     "express": "^4.13.3",
