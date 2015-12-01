@@ -4,11 +4,11 @@ var express = require('express');
 var router = express.Router();
 var ensureAuthenticated = require('../config/ensureAuthenticated.js')
 var User = require('../models/user.js')
-var Conversation = require('../models/conversation.js')
+// var Conversation = require('../models/conversation.js')
 
 router.post('/:id1/:id2', ensureAuthenticated, function(req, res) {
-  console.log('got params: ', req.params.id1, req.params:id2);
-  res.status(200).send(req.params)
+  console.log('got params: ', req.params.id1, req.params.id2);
+  res.status(200).send(req.params);
 });
 
 // router.get( '/', ensureAuthenticated, function(req, res){
