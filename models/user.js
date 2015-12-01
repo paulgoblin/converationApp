@@ -9,8 +9,6 @@ var moment = require('moment');
 var User;
 
 var userSchema = Schema({
-  // email: { type: String, unique: true, lowercase: true },
-  // password: { type: String, select: false },
   displayName: String,
   picture: String,
   github: String,
