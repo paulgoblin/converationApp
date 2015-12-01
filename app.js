@@ -23,6 +23,7 @@ app.use(express.static('public'));
 app.use('/', require('./routes/index'));
 app.use('/auth', require('./routes/auth'));
 app.use('/users', require('./routes/users'));
+app.use('/conversation', require('./routes/conversation'));
 
 
 // 404 HANDLER

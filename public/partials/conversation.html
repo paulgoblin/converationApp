@@ -1,0 +1,11 @@
+<h3>Conversation with {{you.displayName}}:</h3>
+<div class='inConvo'>
+  <img src={{me.picture}} alt="" class="avatar">
+  <img src={{you.picture}} alt="" class="avatar">
+</div>
+
+<textarea name="" id="" cols="30" rows="10" ng-model="newMessage"></textarea>
+<button class="btn btn-default" ng-click="sendMessage(me._id, you._id)">Send</button>
+
+<!-- <div class="post" ng-repeat=""></div> -->
+
