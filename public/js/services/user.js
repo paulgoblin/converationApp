@@ -1,6 +1,6 @@
 angular.module('socialLogin')
 
-.service('userSrvc', function(){
+.service('userSrvc', function($http){
 
   this.me = null;  //id of my user info
   this.allUsers= {};
@@ -8,7 +8,16 @@ angular.module('socialLogin')
   this.saveMe = function(user){
     this.me = user._id;
     console.log('saved me: ', this.me)
-    this.allUsers[user._id] = user;
+  }
+
+  this.getUsers = () => {
+    $http.get('/users/').then((resp) => {
+      resp.data.forEach(user => {
+        this.allUsers[user._id] = user;
+      })
+    }).catch(function(resp){
+      console.log('failed to get users')
+    })
   }
 
 })

@@ -11,6 +11,7 @@ angular.module('socialLogin')
         userSrvc.saveMe(resp.data);
         $state.go('profile')
       })
+      userSrvc.getUsers();
     })
     .catch(function(err){
       console.error(err);

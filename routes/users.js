@@ -14,4 +14,12 @@ router.get('/me', ensureAuthenticated, function(req, res) {
   })
 });
 
+router.get( '/', ensureAuthenticated, function(req, res){
+  User.find( {}, function(err, users){
+    if (err) return res.status(400).send(err.message);
+    res.status(200).send(users);
+    console.log('got all users',users)
+  })
+})
+
 module.exports = router;

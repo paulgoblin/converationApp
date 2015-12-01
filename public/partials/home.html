@@ -1,1 +1,8 @@
 <h1>HOME</h1>
+
+<div ng-repeat="user in allUsers" >
+  <div class="userCard">
+    <img class="avatar" src={{user.picture}} alt={{user.displayName}} >
+    <p>{{user.displayName}}</p>
+  </div>
+</div>
