@@ -5,4 +5,7 @@
     <img class="avatar" src={{user.picture}} alt={{user.displayName}} >
     <p>{{user.displayName}}</p>
   </div>
+  <div class="interactions">
+    <button class="btn btn-default" ui-sref="conversation({meId: me._id, you:user._id})">View Conversation</button>
+  </div>
 </div>

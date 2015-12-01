@@ -1,3 +1,11 @@
 .avatar {
   width: 100px;
 }
+
+.userCard {
+  display: inline-block;
+}
+
+.interactions {
+  display: inline-block;
+}

@@ -2,8 +2,8 @@ angular.module('socialLogin')
 
 .service('userSrvc', function($http){
 
-  this.me = null;  //id of my user info
-  this.allUsers= {};
+  this.me = null;     // id of my user info
+  this.allUsers= {};  // object of all users w _id as keys
 
   this.saveMe = function(user){
     this.me = user._id;
